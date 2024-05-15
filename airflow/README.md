@@ -1,0 +1,2 @@
+airflow
+docker compose up
