@@ -1,0 +1,21 @@
+[2024-04-17T08:59:01.620+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-04-17T08:59:01.655+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_airbyte_job_example.airbyte_trigger_file_feather_sync manual__2024-04-17T07:54:29.697693+00:00 [queued]>
+[2024-04-17T08:59:01.672+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_airbyte_job_example.airbyte_trigger_file_feather_sync manual__2024-04-17T07:54:29.697693+00:00 [queued]>
+[2024-04-17T08:59:01.672+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2024-04-17T08:59:01.701+0000] {taskinstance.py:2327} INFO - Executing <Task(AirbyteTriggerSyncOperator): airbyte_trigger_file_feather_sync> on 2024-04-17 07:54:29.697693+00:00
+[2024-04-17T08:59:01.719+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=55) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-04-17T08:59:01.723+0000] {standard_task_runner.py:63} INFO - Started process 65 to run task
+[2024-04-17T08:59:01.723+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'trigger_airbyte_job_example', 'airbyte_trigger_file_feather_sync', 'manual__2024-04-17T07:54:29.697693+00:00', '--job-id', '68', '--raw', '--subdir', 'DAGS_FOLDER/dag_aribyte_ex.py', '--cfg-path', '/tmp/tmpj05xwrd6']
+[2024-04-17T08:59:01.730+0000] {standard_task_runner.py:91} INFO - Job 68: Subtask airbyte_trigger_file_feather_sync
+[2024-04-17T08:59:01.856+0000] {task_command.py:426} INFO - Running <TaskInstance: trigger_airbyte_job_example.airbyte_trigger_file_feather_sync manual__2024-04-17T07:54:29.697693+00:00 [running]> on host ff62e46d2b31
+[2024-04-17T08:59:02.166+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='trigger_airbyte_job_example' AIRFLOW_CTX_TASK_ID='airbyte_trigger_file_feather_sync' AIRFLOW_CTX_EXECUTION_DATE='2024-04-17T07:54:29.697693+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-17T07:54:29.697693+00:00'
+[2024-04-17T08:59:02.170+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-04-17T08:59:02.191+0000] {base.py:84} INFO - Using connection ID '***_call_airbyte' for task execution.
+[2024-04-17T08:59:03.726+0000] {airbyte.py:86} INFO - Job 191 was submitted to Airbyte Server
+[2024-04-17T08:59:03.727+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-04-17T08:59:03.782+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=trigger_airbyte_job_example, task_id=airbyte_trigger_file_feather_sync, execution_date=20240417T075429, start_date=20240417T085901, end_date=20240417T085903
+[2024-04-17T08:59:03.846+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-04-17T08:59:03.931+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-04-17T08:59:03.939+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
